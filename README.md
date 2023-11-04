@@ -41,3 +41,21 @@ Notes:
 https://snyk.io/learn/what-is-mit-license/
 https://sql.js.org/#/
 
+2023 Nov 2 -
+
+Have to catch up on cleaning, cleaning up notes and documents, cleaning up obligations in Slack notes.
+
+Battle Calculator:
+
+Phase 1:  Define units, rules, methods for use in SQL database.  Look at image hosting.  UI input converts to att/def array, data visualizations.  Concentrate on functionality, user authent last.  Simple OOL UI drag and drop.  Local PRNG generation, feeds to OOL handler.
+
+Phase 2:  Takes PRNG APIs.  Lookup tables instead of PRNG integration, compares result on chart to "ideal" binomial distributio.
+
+Phase 3:  UI for OOL AI.
+
+Phase 4:  Relational database queries by user.  User-added specified fields.
+
+Phase 5:  Investigate force allocation algorithms - multivariate calculus?  Normal distribution to the mean.  Combine with battle calculator
+
+Data structure:
+Mmm, use classes, I suppose?  But data has to be stored in database, so users can query, pass around, that sort of thing.  Unit abilities like submarine strike are stored in third relational database table (unit is one table, ability aother, unit-ability linking unit to ability a third).  Remember that I need language conversion.  Write up the ERD, I suppose.
