@@ -74,20 +74,23 @@ Phase 8:  Cleanup (e.g. remove battleship fake hit unit, remove hindered submari
 
 Mouseover a unit to see more info (source of buff/debuff for example);
 
-1 ('Infantry', 1, 3, 1, 1, 2, 1, 1),           
-2 ('Artillery', 1, 4, 1, 2, 2, 1, 1),
-3 ('Tank', 1, 6, 2, 3, 3, 1, 1),
-4 ('Antiaircraft Gun', 1, 5, 1, 0, 1, 0, 3),
-5 ('Industrial Complex', 1, 15, 0, 0, 1, 0, 3),
-6 ('Transport', 2, 7, 2, 0, 0, 0, 0),
-7 ('Submarine', 2, 6, 2, 2, 1, 1, 1),
-8 ('Destroyer', 2, 8, 2, 2, 2, 1, 1),
-9 ('Aircraft Carrier', 2, 14, 2, 1, 2, 1, 1),
-10 ('Cruiser', 2, 12, 3, 3, 1, 1),
-11 ('Battleship', 2, 20, 2, 4, 4, 1, 1),
-12 ('Fighter', 3, 10, 4, 3, 4, 1, 1),
-13 ('Bomber', 3, 12, 6, 4, 1, 1, 1);
-14 ('Infantry, Enhanced', 1, 3, 1, 2, 2, 1, 1);
+VALUES
+1, (1, 6, 6, 'Infantry', 3, 1, 1, 2, 1, 1),           
+2, (1, 6, 6, 'Artillery', 4, 1, 2, 2, 1, 1),
+3, (1, 6, 6, 'Tank', 6, 2, 3, 3, 1, 1),
+4, (1, 0, 2, 'Antiaircraft Gun', 5, 1, 0, 1, 0, 3),
+5, (1, 0, 2, 'Industrial Complex', 15, 0, 0, 1, 0, 3),
+6, (2, 0, 0, 'Transport', 7, 2, 0, 0, 0, 0),
+7, (2, 4, 4, 'Submarine', 6, 2, 2, 1, 1, 1),
+8, (2, 6, 6, 'Destroyer', 8, 2, 2, 2, 1, 1),
+9, (2, 6, 6, 'Aircraft Carrier', 14, 2, 1, 2, 1, 1),
+10, (2, 6, 6, 'Cruiser', 12, 3, 3, 1, 1),
+11, (2, 6, 6, 'Battleship', 20, 2, 4, 4, 1, 1),
+12, (3, 6, 6, 'Fighter', 10, 4, 3, 4, 1, 1),
+13, (3, 6, 6, 'Bomber', 12, 6, 4, 1, 1, 1);
+14, (1, 6, 6, 'Infantry, Buffed', 3, 1, 2, 2);
+15, (2, 6, 6, 'Submarine, Debuffed', 6, 2, 2, 1, 1, 1),
+16, (2, 6, 6, 'Battleship, Damage Counter', 0, 2, 0, 0, 0, 0);
 
 Things like "types" (land/sea/air), "phases" (combat phases) put into SQL so . . . can . . . update?
 
