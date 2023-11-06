@@ -59,3 +59,52 @@ Phase 5:  Investigate force allocation algorithms - multivariate calculus?  Norm
 
 Data structure:
 Mmm, use classes, I suppose?  But data has to be stored in database, so users can query, pass around, that sort of thing.  Unit abilities like submarine strike are stored in third relational database table (unit is one table, ability aother, unit-ability linking unit to ability a third).  Remember that I need language conversion.  Write up the ERD, I suppose.
+
+REFERENCE:
+What are the phases of combat?
+
+Phase 1:  One-Time Enhancement (E.g. battleship create temporary unit)
+Phase 2:  One-Time Combat (e.g. AA gun, IC AA)
+Phase 3:  First Strike Enhancement (also debuffs like destroyer vs sub)
+Phase 4:  First Strike Combat
+Phase 5:  Regular Unit Enhancement
+Phase 6:  Regular Combat
+Phase 7:  Resolve, retreat, partial retreat and continue from phase 2, or repeat from phase 3.
+Phase 8:  Cleanup (e.g. remove battleship fake hit unit, remove hindered submarines, add regular sub, remove boosted inf, add boosted inf . .. ? or is this just part of phase 3 more or less?)
+
+Mouseover a unit to see more info (source of buff/debuff for example);
+
+1 ('Infantry', 1, 3, 1, 1, 2, 1, 1),           
+2 ('Artillery', 1, 4, 1, 2, 2, 1, 1),
+3 ('Tank', 1, 6, 2, 3, 3, 1, 1),
+4 ('Antiaircraft Gun', 1, 5, 1, 0, 1, 0, 3),
+5 ('Industrial Complex', 1, 15, 0, 0, 1, 0, 3),
+6 ('Transport', 2, 7, 2, 0, 0, 0, 0),
+7 ('Submarine', 2, 6, 2, 2, 1, 1, 1),
+8 ('Destroyer', 2, 8, 2, 2, 2, 1, 1),
+9 ('Aircraft Carrier', 2, 14, 2, 1, 2, 1, 1),
+10 ('Cruiser', 2, 12, 3, 3, 1, 1),
+11 ('Battleship', 2, 20, 2, 4, 4, 1, 1),
+12 ('Fighter', 3, 10, 4, 3, 4, 1, 1),
+13 ('Bomber', 3, 12, 6, 4, 1, 1, 1);
+14 ('Infantry, Enhanced', 1, 3, 1, 2, 2, 1, 1);
+
+Things like "types" (land/sea/air), "phases" (combat phases) put into SQL so . . . can . . . update?
+
+UNRESOLVED
+How to handle fighter landing
+How to have subs and transports not constitute hostile sea zones.
+Enemy and friendly units may both be in a sea zone.  (mobilization)
+When units retreat, where do they retreat to?  How is this handled?
+Abbreviate description, you don't need 400 characters in 'Phases'.
+
+
+
+Antiaircraft fire (or IC fire)
+Regular Combat
+
+Battleship Creates Temporary Unit
+Sub Strike
+Regular Combat
+Sub Strike
+Regular Combat
