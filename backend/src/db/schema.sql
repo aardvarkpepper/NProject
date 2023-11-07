@@ -1,6 +1,19 @@
 -- psql -U postgres -f src/db/schema.sql
 
-DROP TABLE IF EXISTS unit CASCADE;
+-- "Drop table" required where database cannot be dropped (e.g. render(?))
+-- DROP TABLE IF EXISTS environment CASCADE;
+-- DROP TABLE IF EXISTS faction CASCADE;
+-- DROP TABLE IF EXISTS combatphase CASCADE;
+-- DROP TABLE IF EXISTS unit CASCADE;
+-- DROP TABLE IF EXISTS ability CASCADE;
+-- DROP TABLE IF EXISTS unit_x_ability CASCADE;
+
+-- rename database when changing from dev to production.  Hm.  Why not just name it production to begin with?
+
+DROP DATABASE IF EXISTS nproject_dev;
+CREATE DATABASE nproject_dev;
+
+\c nproject_dev;
 
 CREATE TABLE environment (
   id SERIAL PRIMARY KEY,
