@@ -63,16 +63,20 @@ Mmm, use classes, I suppose?  But data has to be stored in database, so users ca
 REFERENCE:
 What are the phases of combat?
 
-Phase 1:  One-Time Enhancement (E.g. battleship create temporary unit)
-Phase 2:  One-Time Combat (e.g. AA gun, IC AA)
+Phase 1:  One-Time Enhancement (E.g. battleship create temporary unit, naval bombardment created)
+Phase 2:  One-Time Combat (e.g. AA gun, IC AA.  Note that naval bombard units are NOT removed, but hits from naval bombards must be allocated in this separate step.  (defender has less info to work with))
 Phase 3:  First Strike Enhancement (also debuffs like destroyer vs sub)
 Phase 4:  First Strike Combat
 Phase 5:  Regular Unit Enhancement
 Phase 6:  Regular Combat
-Phase 7:  Resolve, retreat, partial retreat and continue from phase 2, or repeat from phase 3.
+Phase 7:  Resolve, retreat, partial retreat and continue from phase 2, or repeat from phase 3.  Remove any existing naval bombards.
 Phase 8:  Cleanup (e.g. remove battleship fake hit unit, remove hindered submarines, add regular sub, remove boosted inf, add boosted inf . .. ? or is this just part of phase 3 more or less?)
 
 Mouseover a unit to see more info (source of buff/debuff for example);
+
+Note:  Outside of combat, must be combat handling - strat bombing, amphib, then regular combats.  But player can freely select within each context which they want to handle first.
+
+How do we handle naval bombardment?  We have to "remember" results of a previous combat?  No; if there's naval battle then there's no naval bombard.  So the bombard unit is created CONDITIONAL to being no combat, this must be handled outside the combat phase.  Remember cancellation of combat should not leave naval bombard.  Make an error test for this.
 
 VALUES
 1, (1, 6, 6, 'Infantry', 3, 1, 1, 2, 1, 1),           
@@ -91,6 +95,8 @@ VALUES
 14, (1, 6, 6, 'Infantry, Buffed', 3, 1, 2, 2);
 15, (2, 6, 6, 'Submarine, Debuffed', 6, 2, 2, 1, 1, 1),
 16, (2, 6, 6, 'Battleship, Damage Counter', 0, 2, 0, 0, 0, 0);
+17, (1, 2, 0, 4, 0, 'Cruiser, Naval Gunfire Support', 0, 0, 3, 0, 1, 0),
+18, (1, 2, 0, 4, 0, 'Battleship, Naval Gunfire Support', 0, 0, 4, 0, 1, 0);
 
 Things like "types" (land/sea/air), "phases" (combat phases) put into SQL so . . . can . . . update?
 
@@ -111,3 +117,38 @@ Sub Strike
 Regular Combat
 Sub Strike
 Regular Combat
+
+2023 Nov 8
+What MVP?  User, visual settings (text size, font, color), language, pass attacker unit object array and defender unit object array into function that creates a "hit array"; for n attacks creates n+1 array for 0 hits through n hits.  Then we take those probabilities and multiply by one another recursively to generate binomial.  A shortening function or discarding below a certain fraction is done (this could be problematic) with earlier rounds folding into later rounds, and the overall aggregate is . . . 
+
+Create a tutorial explaining data visualization; two-peak graph, "target" analogy where dart doesn't miss the bullseye but actually hits the thrower in the face (because there's just two "targets" out there.)
+
+Create something that feeds PRNG array in; program takes rolls, computes hits etc, spits out final result.  Then maps to binomial to COMPARE.
+
+And so we will also need PRNG implementation.
+
+And if we're doing binomial table lookups, we don't want to tax the server, so we include ability to have all files saved locally.  User settings, at least.
+
+Need forms to input all this stuff.  Some images too, source.
+
+Naval bombards.  AA and IC only hit air.  Subs only hit sea.
+
+Restrict restrict restrict.
+
+Why is 85% a benchmark?  Why not 90%?  80%?
+
+What is a suspicious roll?  For example, suppose there's an overkill attack, and a player misses a load of rolls.  But those misses didn't really matter.  So should they be counted?
+
+Suppose there's a strafe, and a player misses a lot, by so doing enemies remain and the attacker can retreat.  Here misses are not only "cloaking" good rolls, the misses *themselves* are the cheat objective.
+
+So we have to set up these scenarios where we know that the attacker retreated, where we know that there was overkill.  And how do we do that?  We record the data.
+
+2023 Nov 9
+
+And how would we know, systematically, to test what happens if, in a round, a player R1 attacked W Rus and Ukraine?  A custom inquiry sure, but what about *also* UK1 flying fighters to W Rus?
+
+Write article re: why players should know sealion (opponents may be unfamiliar, the concepts of sealion can be learned quickly, and player should be prepared if it's pulled on them.)
+
+Naval Support shot requires UI.  IC bombing too.
+
+How does the app know how to apply phases?  It's programmed to do so.  This must be reflected in a database - what subroutines are named, what subroutines run during which phase.  However, that's future implementation; for now just hard-code.
