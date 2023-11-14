@@ -9,15 +9,17 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const bookmarksController = require("./controllers/bookmarkController.js");
-//Reviews ROUTES (added below May 1, commented out May 2 per class instructions)
-// const reviewsController = require("./controllers/reviewsController.js");
-// app.use("/reviews", reviewsController);
-app.use("/bookmarks", bookmarksController);
+const abilityController = require("./controllers/abilityController.js");
+const unitController = require("./controllers/unitController.js");
+const unit_x_abilityController = require("./controllers/unit_x_abilityController.js");
+
+app.use("/ability", abilityController);
+app.use("/unit", unitController);
+app.use("/unit_x_ability", unit_x_abilityController);
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Welcome to Bookmarks App");
+  res.send("Backend Home Page");
 });
 
 // 404 PAGE

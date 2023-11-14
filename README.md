@@ -152,3 +152,7 @@ Write article re: why players should know sealion (opponents may be unfamiliar, 
 Naval Support shot requires UI.  IC bombing too.
 
 How does the app know how to apply phases?  It's programmed to do so.  This must be reflected in a database - what subroutines are named, what subroutines run during which phase.  However, that's future implementation; for now just hard-code.
+
+Re: get all unit_x_abilities:  Store in state?  Probably a cost per request, compare to cost per amount of data requested.
+
+We need to have a data bible.  Who controls it.  This is - what is the data names?  Infantry vs infantry (cap vs lowercase)
