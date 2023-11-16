@@ -156,3 +156,45 @@ How does the app know how to apply phases?  It's programmed to do so.  This must
 Re: get all unit_x_abilities:  Store in state?  Probably a cost per request, compare to cost per amount of data requested.
 
 We need to have a data bible.  Who controls it.  This is - what is the data names?  Infantry vs infantry (cap vs lowercase)
+
+https://www.postgresql.org/files/documentation/pdf/16/postgresql-16-US.pdf
+
+CREATE TABLE cities (
+ name varchar(80) primary key,
+ location point
+);
+18
+Advanced Features
+CREATE TABLE weather (
+ city varchar(80) references cities(name),
+ temp_lo int,
+ temp_hi int,
+ prcp real,
+ date date
+);
+CREATE TABLE cities (
+ name varchar(80) primary key,
+ location point
+);
+18
+Advanced Features
+CREATE TABLE weather (
+ city varchar(80) references cities (name),
+ temp_lo int,
+ temp_hi int,
+ prcp real,
+ date date
+);
+
+price numeric CHECK (price > 0) 
+price numeric CONSTRAINT positive_price CHECK (price > 0)
+ product_no integer UNIQUE,
+
+CREATE TABLE tree (
+ node_id integer PRIMARY KEY,
+ parent_id integer REFERENCES tree,
+ name text,
+ ...
+);
+A top-level node would have NULL parent_id, while non-NULL parent_id entries would be constrained to reference valid rows of the table.
+
