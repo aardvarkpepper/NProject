@@ -198,3 +198,38 @@ CREATE TABLE tree (
 );
 A top-level node would have NULL parent_id, while non-NULL parent_id entries would be constrained to reference valid rows of the table.
 
+2023 Nov 16
+OOL amphib units taken first, or last.
+undamaged battleship places in OOL as well (no autohit), relevant sub/air attack
+fig fig car, fig car fig, car fig fig, repeats, permuatations.  User defines loops.
+Steam overlay
+How to handle stalling?  Suggestion re: forcing players to move in games based on timers, ugh.  Note Jan and Matzestinkt thought it was a good idea, ugh.
+unit select shows attack range.
+ibomb damage visual not shown max zoom, fix
+perv on profile; games won, rank, winrate, list ignored users . . . really how much perving is fun, how much intrusive? Honestly should be able to view last few games . .. prep oppoennt
+Breakdown by setup (oob or lhtr), dice type, win %, um.
+replays (and comments), you remember the timestamp implementation you wrote up.
+password lobbies (and autoignore, autoset preferences like < platinum, gold only, etc.)
+email spam lessened; only if 10 minutes since your turn, but also maybe daily digest.  Or uh.  Yeah.  and include screenshot (this is going to cost) so actually send data and have it rendered locally with app?  Mmmm . . . think about this.  Nobody wants to open separate app, can build email extension that renders component?
+Official discord.  Community servers not officially affiliated.  Set the rules (remember!  loose, sigh)
+prominent low luck vs dice etc. visualization.  Even sort options.  Yes.  Not just dice sort either.
+Defensive profiles modular (e.g. sea OOL module, land OOL module)
+Rewind phase (ofc).  Popovitsj suggests purchase phase comes after non-combat move phase, sigh.  Ignore.
+Warning when exit game "have not finished turn".
+Minute timer on time to move. (but this update cost? Um no?)
+"war diary" lists surviving units (and perhaps % outcome)
+Remember to make section on cheat detection; lucky does not mean cheating, some games will be lucky, flagging lucky player as cheating not tolerated (accusations limited!)  But if players want to pay premium, they can investigate all the people.  No, seriously.
+Movement overlay with numbers, select one territory, all other territories in range get a number.  Um.
+banlist chat banlist casual games
+Select all units on territory
+Autocomplete mobilization phase if capital occupied.  Autocomplete turn if no units left and capital occupied.
+How to handle issue reports?  How to make easy for dvs to review?
+customize profile pic etc.
+Increase time limit on ranked games . .. um.  No.  Fischer timer.
+Press button for max resolution image (um).  Don't want to take mulitple screenshots.  Well what is the effing point of that, just have handler to recreate and share?  Well it does need to have some sort of photo export, though that is horribly expensive on bandwidth.
+OOL single destroyer last um.  Popo says only when attacker has subs (ok) and defender has fighters? Because data shows if defender doesn't have fighters, destroyer last doesn't help much? Um?
+Player wants to track other players' timelines; they played them on x date, then that player went on to become platinum or whatever. Or otherwise track ranking and visibility.
+Default sz for France sz 14 to sz8.  Um.  No.  BOth are problems.  FriskyCow
+Map notes include power and turn they were created.
+// end 2023 Nov 09, "suggestions" on Discord.
+
