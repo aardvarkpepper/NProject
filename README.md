@@ -233,3 +233,11 @@ Default sz for France sz 14 to sz8.  Um.  No.  BOth are problems.  FriskyCow
 Map notes include power and turn they were created.
 // end 2023 Nov 09, "suggestions" on Discord.
 
+2023 Nov 18
+
+Microoptimizations: re: Shakey. Also preferrs 1 inf Buryatia 1 inf Burma.
+US1 trn build East.  WTrn to Mexico.
+US2 trn East to Africa.  WTrn to E US.  (Alternately, US trn to Can, W Trn to none)
+UK1 Aus to Solomons cap. Followup US post-Pearl; btl 2 inf, cru 2 inf, 44% mutual wipe.
+
+Need to discover and write formula for allocations and counters.  But how?  Must be some unifying principle.  Normal distribution to the mean and wave combination.
