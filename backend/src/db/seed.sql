@@ -26,7 +26,7 @@ INSERT INTO combatphase
 (name, description)
 VALUES
 ('One-Time Enhancement', '(E.g. battleship create temporary unit)'),
-('One-Time Combat', '(E.g. AA gun, IC AA)'),
+('One-Time Combat', '(E.g. AA gun, IC AA, support shot)'),
 ('First Strike Enhancement', '(E.g. destroyer debuff enemy sub)'),
 ('First Strike Combat', '(E.g. submarine surprise strike)'),
 ('Regular Enhancement', '(E.g. artillery buff infantry)'),

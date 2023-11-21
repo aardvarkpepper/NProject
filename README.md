@@ -64,7 +64,7 @@ REFERENCE:
 What are the phases of combat?
 
 Phase 1:  One-Time Enhancement (E.g. battleship create temporary unit, naval bombardment created)
-Phase 2:  One-Time Combat (e.g. AA gun, IC AA.  Note that naval bombard units are NOT removed, but hits from naval bombards must be allocated in this separate step.  (defender has less info to work with))
+Phase 2:  One-Time Combat (e.g. AA gun, IC AA, support shots.  Note that naval bombard units are NOT removed, but hits from naval bombards must be allocated in this separate step.  (defender has less info to work with))
 Phase 3:  First Strike Enhancement (also debuffs like destroyer vs sub)
 Phase 4:  First Strike Combat
 Phase 5:  Regular Unit Enhancement
